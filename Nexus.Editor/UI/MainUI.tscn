@@ -12,8 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.985682, 1)
 script = ExtResource("1_wbc5i")
-RecentProjectsItemIndex = 2
-RecentProjectsPath = NodePath("Panel/VBoxContainer/MenuBar/File/Recent Projects")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
