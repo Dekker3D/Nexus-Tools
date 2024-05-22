@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn5tbfvqbc17j"]
+
+[ext_resource type="Script" path="res://UI/MainUI.cs" id="1_wbc5i"]
+[ext_resource type="PackedScene" uid="uid://8ousrwhvnqnh" path="res://UI/Table-Editors/HousingDecorInfo.tscn" id="2_2fa1c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.985682, 1)
+script = ExtResource("1_wbc5i")
+RecentProjectsItemIndex = 2
+RecentProjectsPath = NodePath("Panel/VBoxContainer/MenuBar/File/Recent Projects")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBar" type="MenuBar" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="File" type="PopupMenu" parent="Panel/VBoxContainer/MenuBar"]
+size = Vector2i(125, 100)
+item_count = 3
+item_0/text = "Load Project"
+item_0/id = 0
+item_1/text = "Recent Projects"
+item_1/id = 2
+item_2/text = "Save Project"
+item_2/id = 1
+
+[node name="Recent Projects" type="PopupMenu" parent="Panel/VBoxContainer/MenuBar/File"]
+item_count = 1
+item_0/text = "Test"
+item_0/id = 0
+
+[node name="TabContainer" type="TabContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HousingDecorInfo" parent="Panel/VBoxContainer/TabContainer" instance=ExtResource("2_2fa1c")]
+layout_mode = 2

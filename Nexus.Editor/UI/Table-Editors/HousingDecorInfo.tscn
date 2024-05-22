@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://8ousrwhvnqnh"]
+
+[ext_resource type="PackedScene" path="res://UI/Table-Editors/InputBox.tscn" id="1_1xuoa"]
+[ext_resource type="PackedScene" path="res://UI/Table-Editors/EntryContainer.tscn" id="2_m2lyt"]
+[ext_resource type="PackedScene" path="res://UI/Table-Editors/HookAsset.tscn" id="3_uwp4r"]
+
+[node name="HousingDecorInfo" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 2
+
+[node name="InputBox" parent="HFlowContainer" instance=ExtResource("1_1xuoa")]
+layout_mode = 2
+
+[node name="Label" parent="HFlowContainer/InputBox" index="0"]
+text = "Decor Name:"
+
+[node name="InputBox2" parent="HFlowContainer" instance=ExtResource("1_1xuoa")]
+layout_mode = 2
+
+[node name="Label" parent="HFlowContainer/InputBox2" index="0"]
+text = "Scale:
+"
+
+[node name="VBoxContainer" parent="HFlowContainer" instance=ExtResource("2_m2lyt")]
+layout_mode = 2
+
+[node name="HookAsset" parent="HFlowContainer/VBoxContainer" instance=ExtResource("3_uwp4r")]
+layout_mode = 2
+
+[editable path="HFlowContainer/InputBox"]
+[editable path="HFlowContainer/InputBox2"]
+[editable path="HFlowContainer/VBoxContainer"]

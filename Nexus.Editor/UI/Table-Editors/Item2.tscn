@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bc7twpdfjrfdu"]
+
+[node name="Item2" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemName" type="TextEdit" parent="."]
+layout_mode = 2

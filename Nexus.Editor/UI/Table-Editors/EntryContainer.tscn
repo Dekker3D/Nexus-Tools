@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://qdfdsermjttu"]
+
+[ext_resource type="Script" path="res://UI/Table-Editors/EntryContainer.cs" id="1_4xs3t"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4xs3t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Entry Type" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "HookAsset
+"
+
+[node name="ID" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "ID:"
+
+[node name="MakeUnique" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Make Unique"
+
+[node name="Select Existing" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Select Another Entry"

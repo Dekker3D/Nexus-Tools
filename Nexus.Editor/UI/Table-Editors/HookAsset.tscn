@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://4xcc1oq08785"]
+
+[ext_resource type="PackedScene" path="res://UI/Table-Editors/InputBox.tscn" id="1_jltmg"]
+
+[node name="HookAsset" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 2
+
+[node name="InputBox" parent="HFlowContainer" instance=ExtResource("1_jltmg")]
+layout_mode = 2
+
+[node name="Label" parent="HFlowContainer/InputBox" index="0"]
+text = "File Path:"
+
+[node name="InputBox2" parent="HFlowContainer" instance=ExtResource("1_jltmg")]
+layout_mode = 2
+
+[node name="Label" parent="HFlowContainer/InputBox2" index="0"]
+text = "Scale:"
+
+[editable path="HFlowContainer/InputBox"]
+[editable path="HFlowContainer/InputBox2"]

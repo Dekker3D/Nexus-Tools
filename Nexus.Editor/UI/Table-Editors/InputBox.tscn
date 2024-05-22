@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://03x126xrwr1f"]
+
+[node name="InputBox" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Input Name:"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
